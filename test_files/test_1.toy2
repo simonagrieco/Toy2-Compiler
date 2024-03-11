@@ -1,0 +1,99 @@
+% programma principale %
+proc main():
+
+    var operazione : string; \
+    var input1, input2, answer : integer;\
+    var flag ^= true;\
+    var result : integer;\
+
+    while flag = true do
+    <-- "Inserisci l'operazione da effettuare (somma, sottrazione, divisione, moltiplicazione): " $(operazione);
+    <-- "Inserisci il primo input: " $(input1);
+    <-- "Inserisci il secondo input: " $(input2);
+
+    if operazione = "somma" then
+        somma(input1, input2, @result);
+    elseif operazione = "sottrazione" then
+        sottrazione(input1, input2, @result);
+    elseif operazione = "divisione" then
+       resultReal ^= divisione(input1, input2);
+    elseif operazione = "moltiplicazione" then
+       result ^= moltiplicazione(input1, input2);
+    elseif operazione = "func" then
+        var res1, res2, res3, res4: integer;\
+        res1, res2, res3, res4 ^= function();
+    else
+        -->! "Operazione non consentita";
+    endif;
+
+    -->! "Il risultato e': "  $(result);
+    <-- "Vuoi continuare? (1 yes/0 no): " $(answer) ;
+
+    if answer = 1 then
+        flag ^= true;
+    else
+        flag ^= false;
+    endif;
+    var input8: integer;\
+    endwhile;
+    var resultReal : real;\
+    var valore : string;\
+    valore ^= stampa("ed è pari a" +result);
+endproc
+
+
+proc somma(input1: integer, input2: integer, out result: integer):
+    result ^= input1 + input2;
+endproc
+
+proc sottrazione(input1: integer, input2: integer, out result : integer):
+    result ^= input1 - input2;
+endproc
+
+func moltiplicazione(input1: integer, input2: integer) -> integer:
+    var result : integer;\
+    result ^= input1 * input2;
+    return result;
+endfunc
+
+func divisione(input1: integer, input2: integer) -> real:
+
+    var result : real;\
+    if input2 = 0 then
+        --> "Errore";
+        result ^= 0.0;
+
+    endif;
+    return result;
+endfunc
+
+
+func somma_con_commento(ac:integer, b:integer) -> integer:
+    var risultato:integer;\
+    risultato ^= ac+b;
+
+    while ac<9 do
+        var c : integer;\
+        return c;
+    endwhile;
+
+    if (risultato) > 4 then
+            var c : integer;\
+            return c;
+           elseif ac>5 then
+                return 4;
+            else
+            var c : integer;\
+            return 4;
+    endif;
+endfunc
+
+func function() -> integer, integer, integer, integer:
+return moltiplicazione(1,2),moltiplicazione(1,2), moltiplicazione(1,2), moltiplicazione(1,2);
+endfunc
+
+func stampa(stringa: string)->string:
+var s ^= "ciao";\
+return stringa;
+endfunc
+

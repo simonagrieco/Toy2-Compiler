@@ -1,0 +1,57 @@
+% programma principale %
+proc main():
+
+endproc
+
+proc procedura(a:integer, out b: integer):
+
+    var flag ^= true;\
+
+    b ^= 1;
+
+    while(flag) do
+        if(b > 100) then
+            flag ^= false;
+        endif;
+        b ^= b +1;
+    endwhile;
+
+endproc
+
+
+proc procedura2(out a:integer, out valore: integer, out r:real):
+
+    r ^= 0.0;
+    var w, we,we1,we3, caa, wee3, weees, mklsdfkjsdhfk, flag:integer;\
+
+    valore ^= 1;
+
+    while(valore >  100) do
+        if(valore > 100) then
+            we ^= false;
+            valore ^= 1;
+
+            elseif we < 100 then
+                a ^= 3;
+
+            else
+             valore ^= 5;
+
+        endif;
+        we ^= we+1;
+    endwhile;
+
+endproc
+
+
+
+
+%func prova2() -> integer, real, string, boolean:
+
+var b:boolean;\
+
+b ^= true;
+
+return 1911,1.0,"ciao", false;
+
+endfunc %

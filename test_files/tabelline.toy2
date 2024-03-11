@@ -1,0 +1,23 @@
+proc stampa_tabellina(max_value : integer):
+    var i, j^=1,1;\
+    var m:integer;\
+
+    while i <= max_value do
+        while j <= max_value do
+            --> $(i*j);
+            j ^= j+1;
+        endwhile;
+        j^=1;
+        i ^= i+1;
+        -->! "";
+        --> $(-5+4);
+    endwhile;
+endproc
+
+proc main():
+    var size_tabellina : integer;\
+
+    <-- "Inserisci la grandezza della tabellina: " $(size_tabellina);
+
+    stampa_tabellina(size_tabellina);
+endproc

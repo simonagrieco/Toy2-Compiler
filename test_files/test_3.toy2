@@ -1,0 +1,27 @@
+%conta pari e conta dispari%
+
+proc main():
+    var pari, dispari ^= 0,0;\
+    var num: integer;\
+    var c: string;\
+
+    -->! "Programma che conta se vengono inseriti piu' numeri pari o dispari!";
+
+    while c <> "EOF" do
+            <-- "Inserisci il numero: " $(num);
+            <-- "Inserisci EOF per terminare la conta, altro per continuare: " $(c);
+            if (num / 2 = 0) then
+                pari ^= pari + 1;
+            else
+                dispari ^= dispari + 1;
+            endif;
+            %<-- $(num) $(c); %
+    endwhile;
+
+    if(pari > dispari) then
+            -->! "Piu\' numeri pari";
+                else
+            -->! "Piu\' numeri dispari";
+    endif;
+endproc
+
